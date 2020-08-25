@@ -23,8 +23,11 @@ console.log(cognomi);
 // 5. Stampo la lista ordinata
 for (var i = 0; i < cognomi.length; i++) {
   console.log(cognomi[i]);
+  var listaCognomi = document.getElementById("lista_cognomi").innerHTML;
+  document.getElementById("lista_cognomi").innerHTML = listaCognomi + "<li>" + cognomi[i] + "</li>";
 }
 
 // 6. Scrivo la posizione del cognome dell'utente all'interno della lista
 var posizioneCognomeUtente = cognomi.indexOf(cognomeUtente) + 1;
 console.log("La posizione del cognome utente è: " + posizioneCognomeUtente);
+document.getElementById("posizione").innerHTML = "La posizione del cognome utente è: " + posizioneCognomeUtente;
